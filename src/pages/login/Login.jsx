@@ -1,18 +1,56 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./login.css"
 import { Link, useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
+import { IoIosArrowRoundForward } from "react-icons/io";
+import { jwtDecode } from "jwt-decode";
+
+
+const clientId = import.meta.env.VITE_CLIENT_ID;
+console.log("Google Client ID:", clientId);
+
 
 const Login = ( ) => {
   const [name ,setName] = useState('')
   const [password ,setPassword] = useState('')
   const navigate= useNavigate()
+   useEffect(() => {
+        /* global google */
+        if (window.google) {
+          google.accounts.id.initialize({
+            client_id: clientId,
+            callback: handleCredentialResponse,
+          });
+
+          google.accounts.id.renderButton(
+            document.getElementById("googleSignInDiv"),
+            { theme: "outline", size: "large", width: 200,height:100}
+          );
+        }
+      }, []);
+
+      const handleCredentialResponse =(response)=>{
+          try {
+              const user = jwtDecode(response.credential);
+              console.log("✅ Google User:", user);
+
+              // Save to localStorage
+              localStorage.setItem("loggedInUser", JSON.stringify(user));
+              window.dispatchEvent(new Event("storage"));
+              toast.success("Google login success!");
+              navigate("/");
+              } catch (error) {
+                console.error("Error decoding Google token:", error);
+                toast.error("Google login failed!");
+            }
+          }
   const handleSubmit =(e)=>{
     e.preventDefault()
       let users=JSON.parse(localStorage.getItem("users"))||[]
       let validate=users.find(
         (user)=>user.name===name && user.password===password  
       )
+
       // console.log("validate",validate)
       if(validate){
         localStorage.setItem("loggedInUser",JSON.stringify(validate))
@@ -54,12 +92,20 @@ const Login = ( ) => {
                     <input type="password" name="password" value={password} onChange={(e)=>setPassword(e.target.value)} id="password" className="form-control"  placeholder='Password'/>
                 </div>
                 <div className=' text-center '>
-                    <button className="login-btn btn ps-4 pe-4 fs-5 ">Login</button>
+                    <button className="login-btn btn ps-4 pe-4 fs-5  ">Login</button>
+                    <div className='d-flex'>
+                      <div className="mt-4 text-center">
+                  <div id="googleSignInDiv"></div>
+                </div>
+                                     <button className="login-btn btn ps-4 pe-4 fs-5 "><Link to="/register">Sign up here<IoIosArrowRoundForward /></Link></button>
+
+                    </div>
                 </div>
                 <div className="mt-3 text-center">
-                    <p >Don't have an account? <Link to="/register"><u>Sign up here</u></Link></p>
+                   
                 </div>
                 </form>
+                  
             </div>
             
           </div>

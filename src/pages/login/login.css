@@ -10,11 +10,12 @@
 }
 
 .login-btn{
-  margin-top: 2rem;
+  margin-top: 1rem;
   background-color: rgb(170, 102, 12) !important ;
   border: none !important;
   border-radius: 0% !important;
   color:var(--text-secondary);
+  width: 12rem;
 }
 .login-btn:active{
   background-color: rgb(101, 62, 12) !important ;
@@ -89,3 +90,4 @@ input::placeholder{
     margin:10px 0px 20px 0px ;
   }
 }
+

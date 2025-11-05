@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Cards from "../../components/cards/Cards";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 
 const Shop = () => {
   const[products,setProducts]=useState([])
