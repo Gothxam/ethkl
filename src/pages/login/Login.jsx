@@ -93,13 +93,16 @@ const Login = ( ) => {
                 </div>
                 <div className=' text-center '>
                     <button className="login-btn btn ps-4 pe-4 fs-5  ">Login</button>
-                    <div className='d-flex'>
+                    <div className='d-flex justify-content-center'>
                       <div className="mt-4 text-center">
                   <div id="googleSignInDiv"></div>
                 </div>
-                                     <button className="login-btn btn ps-4 pe-4 fs-5 "><Link to="/register">Sign up here<IoIosArrowRoundForward /></Link></button>
+                
 
                     </div>
+                    <p className='mt-3'>
+                  Don't have Account <Link to="/register"><u>Sign up here</u></Link>
+                </p>
                 </div>
                 <div className="mt-3 text-center">
                    
