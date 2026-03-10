@@ -1,17 +1,19 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { BsFillBagFill  } from "react-icons/bs";
+import { BsFillBagFill } from "react-icons/bs";
 import "./Navbar.css";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { openCart } from "../../redux/sidebarCartSlice";
 
 function Head() {
 
-  const cartProduct=useSelector(state=>(state.cart))
+  const cartProduct = useSelector(state => (state.cart))
   let [loggedInUser, setLoggedInUser] = useState(null);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const loadUser = () => {
@@ -68,8 +70,13 @@ function Head() {
                 </Nav.Link>
               </>
             )}
-            <Nav.Link as={NavLink} to="/cart" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
-              <BsFillBagFill/><small className="">{cartProduct.length}</small>
+            <Nav.Link onClick={() => dispatch(openCart())} style={{ cursor: 'pointer' }} className="nav-link position-relative d-flex align-items-center">
+              <BsFillBagFill size={20} />
+              {cartProduct.length > 0 && (
+                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style={{ fontSize: '0.65rem' }}>
+                  {cartProduct.length}
+                </span>
+              )}
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

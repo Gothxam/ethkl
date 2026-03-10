@@ -1,29 +1,30 @@
-.product-img{
+.product-img {
   display: flex !important;
   flex-direction: column;
-  border:none !important;
+  border: none !important;
   border-radius: 5px !important;
   background-color: var(--bg-color) !important;
-   width: 100%;
-   max-width: 500px !important;
-   max-height: 600px !important;
+  width: 100%;
+  max-width: 500px !important;
+  max-height: 600px !important;
   height: auto !important;
   object-fit: cover;
   transform: translateY(10px);
-  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out; 
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
 }
 
-.cart-btn{
+.cart-btn {
   width: 100% !important;
   max-width: 380px;
   background-color: transparent;
   /* margin-top: 2rem; */
-  border: 2px solid rgb(170, 102, 12) !important ;
+  border: 2px solid rgb(170, 102, 12) !important;
   /* border: none !important; */
   border-radius: 0% !important;
   color: #c57233;
 }
-.buy-btn{
+
+.buy-btn {
   width: 100% !important;
   max-width: 380px;
   background-color: var(--bg-footer);
@@ -33,14 +34,14 @@
   color: var(--text-secondary);
 }
 
-.colors{
+.colors {
   width: 1.6rem;
   height: 1.6rem;
   border-radius: 50%;
 }
 
-.size-btn{
-  
+.size-btn {
+
   background-color: transparent;
   width: 2.5rem;
   height: 2.5rem;
@@ -48,6 +49,56 @@
   border-radius: 0.3rem;
 }
 
-.size-btn:hover{
-  border: 2px solid var(--border-color) ;
+.size-btn:hover {
+  border: 2px solid var(--border-color);
 }
+
+/* New Premium Details & Reviews Sections */
+.product-extended {
+  margin-top: 6rem !important;
+  margin-bottom: 5rem;
+}
+
+.spec-card {
+  background-color: var(--bg-secondary-color);
+  border-radius: 16px;
+  border: 1px solid rgba(212, 177, 157, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.spec-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05) !important;
+}
+
+.spec-item span.text-muted {
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+
+.spec-item span.text-dark {
+  font-size: 1.05rem;
+  color: var(--bg-footer) !important;
+}
+
+.review-card {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.review-card:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08) !important;
+  transform: scale(1.01);
+}
+
+.review-text {
+  font-style: italic;
+  line-height: 1.6;
+  border-left: 4px solid var(--border-color);
+}
+
+.text-warning {
+  color: #fca311 !important;
+}
+
+.text-light {}

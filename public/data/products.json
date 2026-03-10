@@ -6,58 +6,215 @@
       "products": [
         {
           "id": 1,
-          "gender":"Men",
+          "gender": "Men",
           "name": "Men's Classic T-Shirt",
           "price": 499,
           "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT5lpT9FIsl_RJcJpkYj-PfUkR4OzdwANZoEsQs5Jy9Atqc5gaNXWDavZP3ZPeocqkFTUEojzsgbbxLp517uxbxrMTDHrJXaSczErDafU95MsR6RX1DxUOCfA",
-          "sizes": ["S", "M", "L", "XL"],
-          "colors": ["Black", "White", "Blue"],
-          "description": "Soft cotton round-neck t-shirt."
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "colors": [
+            "Black",
+            "White",
+            "Blue"
+          ],
+          "description": "Soft cotton round-neck t-shirt.",
+          "details": {
+            "fabric": "100% Premium Cotton",
+            "fit": "Regular Fit",
+            "care": "Machine wash cold, Do not bleach",
+            "origin": "Imported"
+          },
+          "reviews": [
+            {
+              "id": 103,
+              "user": "Jordan P.",
+              "rating": 5,
+              "date": "2025-11-05",
+              "comment": "Highly recommended! Fast shipping."
+            }
+          ]
         },
         {
           "id": 2,
           "name": "Men's Formal Shirt",
           "price": 899,
           "image": "https://assets.myntassets.com/dpr_1.5,q_30,w_400,c_limit,fl_progressive/assets/images/13828288/2021/3/19/7ef08f4f-03e0-4871-8c2a-9206e505fcd21616138653279-INVICTUS-Men-Shirts-8811616138652407-1.jpg",
-          "sizes": ["M", "L", "XL"],
-          "colors": ["White", "Light Blue"],
-          "description": "Slim fit formal shirt for office wear."
+          "sizes": [
+            "M",
+            "L",
+            "XL"
+          ],
+          "colors": [
+            "White",
+            "Light Blue"
+          ],
+          "description": "Slim fit formal shirt for office wear.",
+          "details": {
+            "fabric": "100% Premium Cotton",
+            "fit": "Regular Fit",
+            "care": "Machine wash cold, Do not bleach",
+            "origin": "Imported"
+          },
+          "reviews": [
+            {
+              "id": 101,
+              "user": "Alex D.",
+              "rating": 5,
+              "date": "2025-10-12",
+              "comment": "Absolutely love the quality. Fits perfectly!"
+            },
+            {
+              "id": 102,
+              "user": "Sam K.",
+              "rating": 4,
+              "date": "2025-09-28",
+              "comment": "Great product, but slightly darker than the picture."
+            }
+          ]
         },
         {
           "id": 3,
           "name": "Men's Denim Jeans",
           "price": 1299,
           "image": "https://images.meesho.com/images/products/462601212/kcqg3_512.webp?width=512",
-          "sizes": ["30", "32", "34", "36"],
-          "colors": ["Dark Blue", "Black"],
-          "description": "Slim fit denim jeans for casual style."
+          "sizes": [
+            "30",
+            "32",
+            "34",
+            "36"
+          ],
+          "colors": [
+            "Dark Blue",
+            "Black"
+          ],
+          "description": "Slim fit denim jeans for casual style.",
+          "details": {
+            "fabric": "100% Premium Cotton",
+            "fit": "Regular Fit",
+            "care": "Machine wash cold, Do not bleach",
+            "origin": "Imported"
+          },
+          "reviews": [
+            {
+              "id": 103,
+              "user": "Jordan P.",
+              "rating": 5,
+              "date": "2025-11-05",
+              "comment": "Highly recommended! Fast shipping."
+            }
+          ]
         },
         {
           "id": 4,
           "name": "Men's Hoodie",
           "price": 1499,
           "image": "https://image.hm.com/assets/hm/93/9a/939a7f4d9fe03cc39e7aa3a73914b2d5e4518d65.jpg?imwidth=2160",
-          "sizes": ["M", "L", "XL"],
-          "colors": ["Grey", "Navy Blue"],
-          "description": "Comfortable hoodie with front pocket."
+          "sizes": [
+            "M",
+            "L",
+            "XL"
+          ],
+          "colors": [
+            "Grey",
+            "Navy Blue"
+          ],
+          "description": "Comfortable hoodie with front pocket.",
+          "details": {
+            "fabric": "100% Premium Cotton",
+            "fit": "Regular Fit",
+            "care": "Machine wash cold, Do not bleach",
+            "origin": "Imported"
+          },
+          "reviews": [
+            {
+              "id": 101,
+              "user": "Alex D.",
+              "rating": 5,
+              "date": "2025-10-12",
+              "comment": "Absolutely love the quality. Fits perfectly!"
+            },
+            {
+              "id": 102,
+              "user": "Sam K.",
+              "rating": 4,
+              "date": "2025-09-28",
+              "comment": "Great product, but slightly darker than the picture."
+            }
+          ]
         },
         {
           "id": 5,
           "name": "Men's Jacket",
           "price": 2499,
           "image": "https://dtcralphlauren.scene7.com/is/image/PoloGSI/s7-5462_alternate10?$plpDeskRF$",
-          "sizes": ["M", "L", "XL"],
-          "colors": ["Black", "Brown"],
-          "description": "Stylish leather jacket for winter."
+          "sizes": [
+            "M",
+            "L",
+            "XL"
+          ],
+          "colors": [
+            "Black",
+            "Brown"
+          ],
+          "description": "Stylish leather jacket for winter.",
+          "details": {
+            "fabric": "100% Premium Cotton",
+            "fit": "Regular Fit",
+            "care": "Machine wash cold, Do not bleach",
+            "origin": "Imported"
+          },
+          "reviews": [
+            {
+              "id": 103,
+              "user": "Jordan P.",
+              "rating": 5,
+              "date": "2025-11-05",
+              "comment": "Highly recommended! Fast shipping."
+            }
+          ]
         },
         {
           "id": 6,
           "name": "Men's Polo T-Shirt",
           "price": 799,
           "image": "https://www.lacoste.sa/on/demandware.static/-/Sites-lacoste-ksa-navigation-catalog/default/dw03749bfc/plp-header-l1212-light.jpg",
-          "sizes": ["S", "M", "L", "XL"],
-          "colors": ["Navy Blue", "Green"],
-          "description": "Classic polo t-shirt for casual wear."
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "colors": [
+            "Navy Blue",
+            "Green"
+          ],
+          "description": "Classic polo t-shirt for casual wear.",
+          "details": {
+            "fabric": "100% Premium Cotton",
+            "fit": "Regular Fit",
+            "care": "Machine wash cold, Do not bleach",
+            "origin": "Imported"
+          },
+          "reviews": [
+            {
+              "id": 101,
+              "user": "Alex D.",
+              "rating": 5,
+              "date": "2025-10-12",
+              "comment": "Absolutely love the quality. Fits perfectly!"
+            },
+            {
+              "id": 102,
+              "user": "Sam K.",
+              "rating": 4,
+              "date": "2025-09-28",
+              "comment": "Great product, but slightly darker than the picture."
+            }
+          ]
         }
       ]
     },
@@ -70,54 +227,213 @@
           "name": "Women's Summer Dress",
           "price": 1499,
           "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRhjzm-8_ye4JIt1SV9Qshl_R-WI04lcdxYRqjQ6F2HgeGsu6j8iJ2327FerQEikfYjDDFjm3kWS_2oKiyaGmAm5T0Spj1TtRcGJD7A3bo",
-          "sizes": ["S", "M", "L"],
-          "colors": ["Red", "Yellow", "Pink"],
-          "description": "Lightweight floral dress for outings."
+          "sizes": [
+            "S",
+            "M",
+            "L"
+          ],
+          "colors": [
+            "Red",
+            "Yellow",
+            "Pink"
+          ],
+          "description": "Lightweight floral dress for outings.",
+          "details": {
+            "fabric": "100% Premium Cotton",
+            "fit": "Regular Fit",
+            "care": "Machine wash cold, Do not bleach",
+            "origin": "Imported"
+          },
+          "reviews": [
+            {
+              "id": 103,
+              "user": "Jordan P.",
+              "rating": 5,
+              "date": "2025-11-05",
+              "comment": "Highly recommended! Fast shipping."
+            }
+          ]
         },
         {
           "id": 8,
           "name": "Women's Casual Top",
           "price": 699,
           "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR1bAylbBoHpzpUBR1VsKZVMGRp5l3bw5e_IL3KG6pXHEMAWsxooL9g_FLRD7KhTs0AOk2oowaWYOLYKZGIKO1a97HX8nWqnWMx4kHjBrpu",
-          "sizes": ["S", "M", "L", "XL"],
-          "colors": ["White", "Black", "Peach"],
-          "description": "Soft cotton top for casual wear."
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "colors": [
+            "White",
+            "Black",
+            "Peach"
+          ],
+          "description": "Soft cotton top for casual wear.",
+          "details": {
+            "fabric": "100% Premium Cotton",
+            "fit": "Regular Fit",
+            "care": "Machine wash cold, Do not bleach",
+            "origin": "Imported"
+          },
+          "reviews": [
+            {
+              "id": 101,
+              "user": "Alex D.",
+              "rating": 5,
+              "date": "2025-10-12",
+              "comment": "Absolutely love the quality. Fits perfectly!"
+            },
+            {
+              "id": 102,
+              "user": "Sam K.",
+              "rating": 4,
+              "date": "2025-09-28",
+              "comment": "Great product, but slightly darker than the picture."
+            }
+          ]
         },
         {
           "id": 9,
           "name": "Women's Jeans",
           "price": 1399,
           "image": "https://offduty.in/cdn/shop/files/SHEIN_Cottnline_Jean_Unicolore_Ample__Mode_en_ligne__SHEIN_FRANCE_main_0_1080x.jpg?v=1723554423",
-          "sizes": ["28", "30", "32", "34"],
-          "colors": ["Blue", "Black"],
-          "description": "High-waist slim fit jeans."
+          "sizes": [
+            "28",
+            "30",
+            "32",
+            "34"
+          ],
+          "colors": [
+            "Blue",
+            "Black"
+          ],
+          "description": "High-waist slim fit jeans.",
+          "details": {
+            "fabric": "100% Premium Cotton",
+            "fit": "Regular Fit",
+            "care": "Machine wash cold, Do not bleach",
+            "origin": "Imported"
+          },
+          "reviews": [
+            {
+              "id": 103,
+              "user": "Jordan P.",
+              "rating": 5,
+              "date": "2025-11-05",
+              "comment": "Highly recommended! Fast shipping."
+            }
+          ]
         },
         {
           "id": 10,
           "name": "Women's Hoodie",
           "price": 1599,
           "image": "https://n.nordstrommedia.com/it/e803f6d6-3c77-415b-be69-3fe7e47495fb.jpeg?h=368&w=240&dpr=2",
-          "sizes": ["S", "M", "L"],
-          "colors": ["Pink", "Grey"],
-          "description": "Warm hoodie for winter wear."
+          "sizes": [
+            "S",
+            "M",
+            "L"
+          ],
+          "colors": [
+            "Pink",
+            "Grey"
+          ],
+          "description": "Warm hoodie for winter wear.",
+          "details": {
+            "fabric": "100% Premium Cotton",
+            "fit": "Regular Fit",
+            "care": "Machine wash cold, Do not bleach",
+            "origin": "Imported"
+          },
+          "reviews": [
+            {
+              "id": 101,
+              "user": "Alex D.",
+              "rating": 5,
+              "date": "2025-10-12",
+              "comment": "Absolutely love the quality. Fits perfectly!"
+            },
+            {
+              "id": 102,
+              "user": "Sam K.",
+              "rating": 4,
+              "date": "2025-09-28",
+              "comment": "Great product, but slightly darker than the picture."
+            }
+          ]
         },
         {
           "id": 11,
           "name": "Women's Kurti",
           "price": 1199,
           "image": "https://images.jdmagicbox.com/quickquotes/images_main/-0caxaigo.jpg",
-          "sizes": ["S", "M", "L", "XL"],
-          "colors": ["Green", "Blue", "Maroon"],
-          "description": "Traditional kurti with embroidery design."
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "colors": [
+            "Green",
+            "Blue",
+            "Maroon"
+          ],
+          "description": "Traditional kurti with embroidery design.",
+          "details": {
+            "fabric": "100% Premium Cotton",
+            "fit": "Regular Fit",
+            "care": "Machine wash cold, Do not bleach",
+            "origin": "Imported"
+          },
+          "reviews": [
+            {
+              "id": 103,
+              "user": "Jordan P.",
+              "rating": 5,
+              "date": "2025-11-05",
+              "comment": "Highly recommended! Fast shipping."
+            }
+          ]
         },
         {
           "id": 12,
           "name": "Women's Formal Blazer",
           "price": 2499,
           "image": "https://assets.myntassets.com/dpr_1.5,q_30,w_400,c_limit,fl_progressive/assets/images/2024/NOVEMBER/8/l1wufvDK_4fc78ca0e2d94324b9255bd90ebc3bc5.jpg",
-          "sizes": ["S", "M", "L"],
-          "colors": ["Black", "Navy Blue"],
-          "description": "Elegant blazer for formal occasions."
+          "sizes": [
+            "S",
+            "M",
+            "L"
+          ],
+          "colors": [
+            "Black",
+            "Navy Blue"
+          ],
+          "description": "Elegant blazer for formal occasions.",
+          "details": {
+            "fabric": "100% Premium Cotton",
+            "fit": "Regular Fit",
+            "care": "Machine wash cold, Do not bleach",
+            "origin": "Imported"
+          },
+          "reviews": [
+            {
+              "id": 101,
+              "user": "Alex D.",
+              "rating": 5,
+              "date": "2025-10-12",
+              "comment": "Absolutely love the quality. Fits perfectly!"
+            },
+            {
+              "id": 102,
+              "user": "Sam K.",
+              "rating": 4,
+              "date": "2025-09-28",
+              "comment": "Great product, but slightly darker than the picture."
+            }
+          ]
         }
       ]
     }

@@ -1,59 +1,76 @@
-// src/components/Cart.jsx
+import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { closeCart } from "../../redux/sidebarCartSlice";
+import { useNavigate } from "react-router-dom";
+import Offcanvas from "react-bootstrap/Offcanvas";
+import Button from "react-bootstrap/Button";
+import { BsTrash } from "react-icons/bs";
+import { remove } from "../../redux/slice";
 
 const Cart = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  // cart state now has both cart items & UI state
+  // Get cart items and UI open state from correct reducers
   const cartItems = useSelector((state) => state.cart);
-  const isCartOpen = useSelector((state) => state.cart.isCartOpen);
+  const isCartOpen = useSelector((state) => state.sidebar.isCartOpen);
+
+  const handleCheckout = () => {
+    dispatch(closeCart());
+    navigate("/checkout");
+  };
+
+  const handleRemove = (id) => {
+    dispatch(remove(id));
+  };
+
+  const totalPrice = cartItems.reduce((acc, item) => acc + item.price, 0);
 
   return (
-    <>
-      {/* Overlay (click to close) */}
-      {isCartOpen && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-40 z-40"
-          onClick={() => dispatch(closeCart())}
-        />
-      )}
-
-      {/* Sidebar */}
-      <div
-        className={`fixed top-0 right-0 h-full w-80 bg-white shadow-lg transform transition-transform duration-300 z-50 ${
-          isCartOpen ? "translate-x-0" : "translate-x-full"
-        }`}
-      >
-        {/* Header */}
-        <div className="flex justify-between items-center p-4 border-b">
-          <h2 className="text-lg font-bold">Your Cart</h2>
-          <button
-            onClick={() => dispatch(closeCart())}
-            className="text-gray-500 hover:text-black"
-          >
-            ✖
-          </button>
-        </div>
-
-        {/* Cart Items */}
-        <div className="p-4 space-y-4 overflow-y-auto h-[calc(100%-60px)]">
-          {cartItems.length === 0 ? (
-            <p className="text-gray-500">Your cart is empty</p>
-          ) : (
-            cartItems.map((item, index) => (
-              <div key={index} className="flex items-center gap-2 border-b pb-2">
-                <img src={item.image} alt={item.name} className="w-12 h-12" />
-                <div>
-                  <h4 className="font-medium">{item.name}</h4>
-                  <p>₹{item.price}</p>
+    <Offcanvas show={isCartOpen} onHide={() => dispatch(closeCart())} placement="end">
+      <Offcanvas.Header closeButton>
+        <Offcanvas.Title className="fw-bold">Your Shopping Cart</Offcanvas.Title>
+      </Offcanvas.Header>
+      <Offcanvas.Body className="d-flex flex-column">
+        {cartItems.length === 0 ? (
+          <div className="text-center text-muted mt-5">
+            <p className="fs-5">Your cart is empty.</p>
+          </div>
+        ) : (
+          <div className="flex-grow-1 overflow-auto">
+            {cartItems.map((item, index) => (
+              <div key={index} className="d-flex align-items-center mb-3 p-2 border-bottom">
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  style={{ width: "60px", height: "60px", objectFit: "cover", borderRadius: "8px" }}
+                  className="me-3"
+                />
+                <div className="flex-grow-1">
+                  <h6 className="mb-1 text-truncate" style={{ maxWidth: "180px" }}>{item.name}</h6>
+                  <p className="mb-0 fw-bold text-success">₹{item.price}</p>
                 </div>
+                <Button variant="outline-danger" size="sm" onClick={() => handleRemove(item.id)}>
+                  <BsTrash />
+                </Button>
               </div>
-            ))
-          )}
-        </div>
-      </div>
-    </>
+            ))}
+          </div>
+        )}
+
+        {cartItems.length > 0 && (
+          <div className="mt-4 border-top pt-3">
+            <div className="d-flex justify-content-between mb-3">
+              <span className="fw-bold fs-5">Subtotal:</span>
+              <span className="fw-bold fs-5">₹{totalPrice.toFixed(2)}</span>
+            </div>
+            <Button variant="dark" className="w-100 py-2 fs-5" onClick={handleCheckout}>
+              Proceed to Checkout
+            </Button>
+          </div>
+        )}
+      </Offcanvas.Body>
+    </Offcanvas>
   );
 };
 

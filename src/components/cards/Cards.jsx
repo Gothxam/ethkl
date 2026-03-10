@@ -8,9 +8,9 @@ import 'react-loading-skeleton/dist/skeleton.css';
 import { motion } from "motion/react"
 
 
-function Cards({id, name, price, image, showPrice=false, isSkeleton=false  }) {
-const [imgLoaded, setImgLoaded] = useState(false);
- if (isSkeleton) {
+function Cards({ id, name, price, image, category, showPrice = false, isSkeleton = false }) {
+  const [imgLoaded, setImgLoaded] = useState(false);
+  if (isSkeleton) {
     return (
       <Card className="card">
         <div className="img-skeleton"></div>
@@ -20,12 +20,12 @@ const [imgLoaded, setImgLoaded] = useState(false);
         </Card.Body>
       </Card>
     );
-  }  
+  }
 
   return (
-    
+
     <Card className="card">
-      <Link to={`detail/${id}`}>
+      <Link to={`/${category || 'shop'}/detail/${id}`}>
         {!imgLoaded && <div className="img-skeleton"></div>}
         <Card.Img
           variant="top"
@@ -39,7 +39,7 @@ const [imgLoaded, setImgLoaded] = useState(false);
         {showPrice && <Card.Text>Price: ₹{price}</Card.Text>}
       </Card.Body>
     </Card>
-    
+
   );
 }
 
